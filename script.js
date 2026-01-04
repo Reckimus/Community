@@ -152,5 +152,3 @@ function updateCategoryCounts() {
         countSpan.textContent = `${count} ${count === 1 ? 'topic' : 'topics'}`;
     });
 }
-
-// Load recent topics
