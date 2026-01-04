@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌐 Community Forum</h1>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="#" id="new-topic-btn">New Topic</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="welcome-section">
+            <h2>Welcome to Our Community</h2>
+            <p>Join the conversation, share your thoughts, and connect with other community members.</p>
+        </section>
+
+        <section class="categories-section">
+            <h3>Forum Categories</h3>
+            <div class="categories-grid">
+                <div class="category-card" data-category="general">
+                    <div class="category-icon">💬</div>
+                    <h4>General Discussion</h4>
+                    <p>Talk about anything and everything</p>
+                    <span class="topic-count">0 topics</span>
+                </div>
+                <div class="category-card" data-category="announcements">
+                    <div class="category-icon">📢</div>
+                    <h4>Announcements</h4>
+                    <p>Important news and updates</p>
+                    <span class="topic-count">0 topics</span>
+                </div>
+                <div class="category-card" data-category="support">
+                    <div class="category-icon">🆘</div>
+                    <h4>Support</h4>
+                    <p>Get help from the community</p>
+                    <span class="topic-count">0 topics</span>
+                </div>
+                <div class="category-card" data-category="feedback">
+                    <div class="category-icon">💡</div>
+                    <h4>Feedback & Ideas</h4>
+                    <p>Share your suggestions</p>
+                    <span class="topic-count">0 topics</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-topics-section">
+            <h3>Recent Topics</h3>
+            <div id="recent-topics" class="topics-list">
+                <p class="empty-state">No topics yet. Be the first to start a discussion!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- New Topic Modal -->
+    <div id="new-topic-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Topic</h2>
+            <form id="new-topic-form">
+                <div class="form-group">
+                    <label for="topic-category">Category</label>
+                    <select id="topic-category" required>
+                        <option value="">Select a category</option>
+                        <option value="general">General Discussion</option>
+                        <option value="announcements">Announcements</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback & Ideas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="topic-title">Title</label>
+                    <input type="text" id="topic-title" placeholder="Enter topic title" required>
+                </div>
+                <div class="form-group">
+                    <label for="topic-author">Your Name</label>
+                    <input type="text" id="topic-author" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="topic-content">Content</label>
+                    <textarea id="topic-content" rows="6" placeholder="Write your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Topic</button>
+                <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Community Forum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

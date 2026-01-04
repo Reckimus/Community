@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic - Community Forum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌐 Community Forum</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#new-topic-btn">New Topic</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>&raquo;</span>
+            <span id="breadcrumb-category">Category</span>
+            <span>&raquo;</span>
+            <span id="breadcrumb-title">Topic</span>
+        </div>
+
+        <div id="topic-view" class="topic-view">
+            <div class="topic-header">
+                <h2 id="topic-title">Loading...</h2>
+                <div class="topic-meta">
+                    <span class="category-badge" id="topic-category-badge">General</span>
+                    <span class="topic-author">by <strong id="topic-author">Anonymous</strong></span>
+                    <span class="topic-date" id="topic-date">Just now</span>
+                </div>
+            </div>
+
+            <div class="topic-content" id="topic-content">
+                <p>Loading topic content...</p>
+            </div>
+
+            <div class="replies-section">
+                <h3>Replies (<span id="reply-count">0</span>)</h3>
+                <div id="replies-list" class="replies-list">
+                    <p class="empty-state">No replies yet. Be the first to reply!</p>
+                </div>
+            </div>
+
+            <div class="reply-form-section">
+                <h3>Post a Reply</h3>
+                <form id="reply-form">
+                    <div class="form-group">
+                        <label for="reply-author">Your Name</label>
+                        <input type="text" id="reply-author" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reply-content">Your Reply</label>
+                        <textarea id="reply-content" rows="4" placeholder="Write your reply..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Post Reply</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Community Forum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="topic.js"></script>
+</body>
+</html>
